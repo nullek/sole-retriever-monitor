@@ -13,7 +13,7 @@ with open("links.json","r") as f:
 async def on_ready():
   while True:
     channel = client.get_channel(here paste channel ID)
-    req = requests.get('here paste link to raffle') #https://www.soleretriever.com/raffles/nike-vaporwaffle-sacai-tan-navy-dd1875-200
+    req = requests.get('here paste link to raffle') #for example: https://www.soleretriever.com/raffles/nike-vaporwaffle-sacai-tan-navy-dd1875-200
     soup = BeautifulSoup(req.text, "html.parser")
 
     for main in soup.find_all("div", class_="sc-bdfBwQ sc-gsTCUz zanrti-0 jzXtZT bhdLno cYEQVO"):

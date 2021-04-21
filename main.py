@@ -12,8 +12,8 @@ with open("links.json","r") as f:
 @client.event
 async def on_ready():
   while True:
-    channel = client.get_channel(834457864038252544)
-    req = requests.get('https://www.soleretriever.com/raffles/nike-vaporwaffle-sacai-tan-navy-dd1875-200')
+    channel = client.get_channel(here paste channel ID)
+    req = requests.get('here paste link to raffle') #https://www.soleretriever.com/raffles/nike-vaporwaffle-sacai-tan-navy-dd1875-200
     soup = BeautifulSoup(req.text, "html.parser")
 
     for main in soup.find_all("div", class_="sc-bdfBwQ sc-gsTCUz zanrti-0 jzXtZT bhdLno cYEQVO"):
@@ -36,7 +36,7 @@ async def on_ready():
                 embed.add_field(name="Type:", value=raffleType, inline=False)
                 embed.add_field(name="Region:", value=region, inline=False)
                 embed.set_image(url=shoeImage)
-                embed.set_footer(text="Doggify Monitors", icon_url="https://media.discordapp.net/attachments/808292830988599296/813544846496628776/test2.png")
+                embed.set_footer(text="Made by nullek#4646 | @nullek2")
                 msg = await channel.send(embed=embed)
                 await msg.add_reaction("✅")
                 with open("ok.json","w") as f:
@@ -44,4 +44,4 @@ async def on_ready():
 
     await asyncio.sleep(60*5)
 
-client.run("ODM0NDU4Nzk0NjU3NTc5MDE4.YIBMUA.D6f3oZaAiqRyCGg3r-VWsMWshmI")
+client.run("here paste your bot token")

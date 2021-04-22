@@ -39,8 +39,8 @@ async def on_ready():
                 embed.set_footer(text="Made by nullek#4646 | @nullek2")
                 msg = await channel.send(embed=embed)
                 await msg.add_reaction("✅")
-                with open("ok.json","w") as f:
-                    json.dump(ok,f)   
+                with open("links.json","w") as f:
+                    json.dump(links,f)   
 
     await asyncio.sleep(60*5)
 
